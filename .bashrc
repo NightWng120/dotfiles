@@ -138,7 +138,9 @@ bash_prompt
 #  clearfi
 set -o vi
 source ~/Scripts/tmux.sh
-alias idea="sh Scripts/idea.sh"
+alias murder="bash ~/Scripts/murder.sh"
+alias playerctld="playerctld "
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 #-----------------------------------
 
 case "$TERM" in
@@ -209,3 +211,7 @@ fi
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 . "$HOME/.cargo/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
