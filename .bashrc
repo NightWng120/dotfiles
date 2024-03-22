@@ -114,6 +114,15 @@ function bash_prompt() {
 
 bash_prompt
 
+lf () {
+	LF_TEMPDIR="$(mktemp -d -t lf-tempdir-XXXXXX)"
+	LF_TEMPDIR="$LF_TEMPDIR" lf-run -last-dir-path="$LF_TEMPDIR/lastdir" "$@"
+	if [ "$(cat "$LF_TEMPDIR/cdtolastdir" 2>/dev/null)" = "1" ]; then
+		cd "$(cat "$LF_TEMPDIR/lastdir")"
+	fi
+	rm -r "$LF_TEMPDIR"
+	unset LF_TEMPDIR
+}
 
 #if [ "$TERM" = "linux" ]; then
 #  /bin/echo -e "
@@ -140,7 +149,9 @@ set -o vi
 source ~/Scripts/tmux.sh
 alias murder="bash ~/Scripts/murder.sh"
 alias playerctld="playerctld "
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/nightwng120/.local/bin
+# export PATH=$PATH:/home/nightwng120/Scripts/lf-run:/home/nightwng120/Scripts/lf-previewer:/home/nightwng120/Scripts/lf-cleaner
+
 #-----------------------------------
 
 case "$TERM" in
