@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+" set nocompatible              " be iMproved, required
 
 filetype off                  " required
 
@@ -45,12 +45,14 @@ filetype plugin indent on    " required
 inoremap jj <ESC>
 
 let mapleader =" "
-set background=dark
+" set background=light
 filetype off
 let g:lightline = { 'colorscheme': 'jellybeans' }
 set laststatus=2
 let g:gruvbox_italic=1
+autocmd VimEnter * hi Normal ctermbg=none
 colo gruvbox
+" colo habamax
 set bg=dark
 set go=a
 set mouse=a
