@@ -1,0 +1,2 @@
+Remember to either download the latest release or build Neovim and Picom from source.
+Neovim and Picom both have their built binaries linked in the /usr/bin directory
