@@ -1,0 +1,36 @@
+# define a custom 'delete' command
+cmd delete ${{
+    set -f
+    printf "$fx\n"
+    printf "delete?[y/n]"
+    read ans
+    [ "$ans" = "y" ] && rm -rf $fx
+}}
+
+# define a custom 'rename' command without prompt for overwrite
+cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
+map r push :rename<space>
+
+cmd create ${{
+    set -f
+    printf "$fx\n"
+    printf "Enter File Name: "
+    read ans
+	touch $ans
+	printf "$ans created\n"
+	read meme
+}}
+
+map <delete> delete
+map C create
+map . set hidden!
+
+
+set previewer lf-previewer
+set cleaner lf-cleaner
+
+map x quitcd
+cmd quitcd ${{
+	echo "1" > "$LF_TEMPDIR"/cdtolastdir
+	lf -remote "send $id quit"
+}}
