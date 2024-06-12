@@ -1,2 +1,9 @@
 Remember to either download the latest release or build Neovim and Picom from source.
 Neovim and Picom both have their built binaries linked in the /usr/bin directory
+
+If you want to install ueberzugpp for image support in lf manually download the repo from opensuse for DEBIAN STABLE
+https://software.opensuse.org/download.html?project=home%3Ajustkidding&package=ueberzugpp
+
+Scripts for image preview in lf
+Place links to the scripts in the ~/.local/bin directory
+https://github.com/gokcehan/lf/wiki/Previews#with-%C3%BCberzug
