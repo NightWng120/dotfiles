@@ -1,3 +1,5 @@
+Might need to re-clone plugin folders for tmux plugins to work
+
 Remember to either download the latest release or build Neovim and Picom from source.
 Neovim and Picom both have their built binaries linked in the /usr/bin directory
 
@@ -7,3 +9,11 @@ https://software.opensuse.org/download.html?project=home%3Ajustkidding&package=u
 Scripts for image preview in lf
 Place links to the scripts in the ~/.local/bin directory
 https://github.com/gokcehan/lf/wiki/Previews#with-%C3%BCberzug
+
+For screen tearing add this to 20-intel.conf in the /etc/X11/xorg.conf.d/ directory
+
+Section "Device"
+    Identifier    "Intel Graphics"
+    Driver        "intel"
+    Option        "TearFree"  "true"
+EndSection
