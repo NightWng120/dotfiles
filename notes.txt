@@ -11,6 +11,7 @@ Place links to the scripts in the ~/.local/bin directory
 https://github.com/gokcehan/lf/wiki/Previews#with-%C3%BCberzug
 
 For screen tearing add this to 20-intel.conf in the /etc/X11/xorg.conf.d/ directory
+May cause your machine to run slow if it's really low end
 
 Section "Device"
     Identifier    "Intel Graphics"
