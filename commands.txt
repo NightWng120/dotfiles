@@ -1,0 +1,12 @@
+rsync move file command example
+
+-a transfers ownership and permissions
+|       -v verbose mode
+|       |    Includes files of desired type
+|       |                  |   Excludes files of desired type               For when you want to move instead of copy files over
+L______ |                  |              |                                                     |
+       ||                  |              |                                                     |
+       vv                  v              v                                                     v
+rsync -av   --include="*.filetype" --exclude="*" source_directory/ destination_directory/ --remove-source-files
+
+
