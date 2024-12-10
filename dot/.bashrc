@@ -47,6 +47,7 @@ esac
 [[ -s /home/nightwng120/.autojump/etc/profile.d/autojump.sh ]] && source /home/nightwng120/.autojump/etc/profile.d/autojump.sh
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export MANPAGER='nvim +Man!'
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
