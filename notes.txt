@@ -23,3 +23,6 @@ EndSection
 Simply add this to a kwalletrc file to get rid of annoying kwallet pop ups
 [Wallet]
 Enabled=false
+
+
+sudo apt autoremove $(sudo dpkg -l | grep "put your desired search term here" | awk '{print $2}')
