@@ -11,7 +11,7 @@ Place links to the scripts in the ~/.local/bin directory
 https://github.com/gokcehan/lf/wiki/Previews#with-%C3%BCberzug
 
 For screen tearing add this to 20-intel.conf in the /etc/X11/xorg.conf.d/ directory
-May cause your machine to run slow if it's really low end
+May cause your machine to run slow if its really low end
 
 Section "Device"
     Identifier    "Intel Graphics"
@@ -23,6 +23,5 @@ EndSection
 Simply add this to a kwalletrc file to get rid of annoying kwallet pop ups
 [Wallet]
 Enabled=false
-
 
 sudo apt autoremove $(sudo dpkg -l | grep "put your desired search term here" | awk '{print $2}')
